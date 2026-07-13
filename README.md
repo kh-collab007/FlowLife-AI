@@ -5,7 +5,7 @@ FlowLife AIは、日々の生活の中で「何から始めるべきか」を考
 ## Vision
 人は毎日、「何から始めるべきか」という小さな意思決定を何度も繰り返して生活しています。
 FlowLife AIは、その迷う時間を減らし、一人ひとりがより充実した毎日を送れることを目指して開発しています。
-## Current Features
+## Planned Features
 - タスク登録
 - タスク一覧表示
 - AIによる優先順位提案
@@ -30,3 +30,14 @@ FlowLife AIは、その迷う時間を減らし、一人ひとりがより充実
 現在開発中です。このアイデアが本当に人の生活を良くするかは、まだ分かりません。だからこそ、小さく公開し、ユーザーのフィードバックを受けながら改善を重ねていきたいと考えています。
 ## Project Status
 current Version: v0.1.0(Development)
+## Development Log
+### 2026/07/13
+- Created FlowLife AI project
+- Set up GitHub repository and development environment
+- Implemented the first Python backend program
+- Verified local execution
+- Learned and established the Git workflow:
+  - git status
+  - git add
+  - git commit
+  - git push
