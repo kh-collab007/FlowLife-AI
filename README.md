@@ -41,3 +41,10 @@ current Version: v0.1.0(Development)
   - git add
   - git commit
   - git push
+### 2026/07/14
+- FlowLife AIの初めてのWebページを作成
+- FastAPIでJSONを返すだけでなく、HTMLを表示する仕組みを実装
+- Jinja2を利用したHTMLテンプレート表示を追加
+- `templates/index.html` を作成
+- FastAPI（バックエンド）とHTML（フロントエンド）の役割分担を理解
+- ローカル環境でWebページの表示に成功
