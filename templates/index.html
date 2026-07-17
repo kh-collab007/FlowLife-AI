@@ -10,11 +10,19 @@
     <p>
         FlowLife AIへようこそ!
     </p>
-    <form>
+    <form action="/submit" method="post">
         <label for="goal">今日の目標</label>
-        <input type="text" id ="goal">
+        <br><br>
 
-        <button>登録する</button>
+        <input 
+            type="text"
+            id ="goal"
+            name = "goal"
+            placeholder="今日の目標を入力してください"
+        >
+        <br><br>
+
+        <button type="submit">登録する</button>
     </form>
 </body>
 
