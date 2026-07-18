@@ -8,7 +8,16 @@
     <h1>FlowLife AI</h1>
     <h2>あなたの目標</h2>
     {% for goal in goals %}
-    <p>{{goal}}</p>
+    <p>{{goal.id}}:{{goal.text}} 
+        {% if goal.done %}
+            ✅ 達成済み
+        {% else %}
+            ⏳ 未達成
+        {% endif %}
+    </p>
+    <form action="/complete/{{goal.id}}"method="post">
+        <button type="submit">達成</button>
+    </form>
     {% endfor %}
     <a href="/">トップページに戻る</a>
 </body>

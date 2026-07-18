@@ -21,11 +21,32 @@ def submit_goal(
     request:Request,
     goal: str = Form(...)
 ):
-    goals.append(goal)
+    goal_data = {
+        "id":len(goals)+1,
+        "text":goal,
+        "done":False
+    }
+    goals.append(goal_data)
     return templates.TemplateResponse(
         request = request,
         name = "result.html",
         context={
+            "goals":goals
+        }
+    )
+
+@app.post("/complete/{goal_id}")
+def complete_goal(
+    request: Request,
+    goal_id: int
+):
+    for goal in goals:
+        if goal["id"]== goal_id:
+            goal["done"] = True
+    return templates.TemplateResponse(
+        request = request,
+        name = "result.html",
+        context = {
             "goals":goals
         }
     )
