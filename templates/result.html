@@ -15,8 +15,13 @@
             ⏳ 未達成
         {% endif %}
     </p>
+    {% if not goal.done %}
     <form action="/complete/{{goal.id}}"method="post">
         <button type="submit">達成</button>
+    </form>
+    {% endif %}
+    <form action ="/delete/{{goal.id}}"method = "post">
+        <button type = "submit">削除</button>
     </form>
     {% endfor %}
     <a href="/">トップページに戻る</a>

@@ -50,3 +50,20 @@ def complete_goal(
             "goals":goals
         }
     )
+
+@app.post("/delete/{goal_id}")
+def delete_goal(
+    request: Request,
+    goal_id: int
+):
+    for goal in goals:
+        if goal["id"] == goal_id:
+            goals.remove(goal)
+            break
+    return templates.TemplateResponse(
+        request = request,
+        name = "result.html",
+        context = {
+            "goals":goals
+        }
+    )
